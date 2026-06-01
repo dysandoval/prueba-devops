@@ -2,11 +2,11 @@ name: Pipeline CI/CD Automatizado - Duoc UC
 
 on:
   push:
-    branches: [ "main" ] # Se activa automáticamente al subir cambios a main
+    branches: [ "main" ] 
 
 jobs:
   pruebas-y-seguridad:
-    runs-on: ubuntu-latest # GitHub nos presta una máquina Linux en la nube
+    runs-on: ubuntu-latest 
 
     steps:
     - name: 1. Clonar el código en la nube
@@ -30,7 +30,7 @@ jobs:
       with:
         image-ref: 'mi-app-simulada:${{ github.sha }}'
         format: 'table'
-        exit-code: '1' # CRÍTICO: Bloquea y rompe el pipeline (exit 1) si hay peligro alto
+        exit-code: '1' 
         severity: 'CRITICAL,HIGH'
 
     - name: 5. Despliegue Automático en Entorno Cloud Simulado (IE4)
