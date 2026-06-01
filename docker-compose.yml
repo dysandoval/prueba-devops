@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  mi-microservicio:
+    build: . # Usa el Dockerfile que creamos en el paso anterior
+    ports:
+      - "3000:3000" # Une el puerto de tu PC con el del contenedor
+    restart: always # Si la app se cae, se levanta sola automáticamente
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'     # Parámetro de Seguridad: Máximo la mitad de 1 núcleo de CPU
+          memory: 512M    # Parámetro de Escalabilidad: Máximo 512 Megabytes de RAM
