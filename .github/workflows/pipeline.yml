@@ -17,11 +17,9 @@ jobs:
       with:
         node-version: 18
 
-    - name: 3. Integrar Pruebas Automatizadas (IE2)
+- name: 3. Integrar Pruebas Automatizadas (IE2)
       run: |
-        echo "Instalando dependencias para pruebas..."
-        # npm install
-        echo "Ejecutando pruebas unitarias de calidad..."
+        echo "Ejecutando pruebas unitarias de calidad simuladas..."
         # Nota para el docente: Si el proyecto base incluye scripts de test, se ejecuta aquí:
         # npm test
 
